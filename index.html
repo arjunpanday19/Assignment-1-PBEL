@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBEL assignment 1</title>
+    <style>
+      body {
+  overflow-x: hidden;
+  font-family: Sans-Serif;
+  margin: 0;
+}
+
+.menu-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background: white;
+  color: black;
+  padding: 20px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.menu-logo {
+  line-height: 0;
+  margin: 0 20px;
+}
+
+.menu-logo img {
+  max-height: 40px;
+  max-width: 100px;
+  flex-shrink: 0;
+}
+
+.menu-container a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+
+
+.menu-container input {
+  display: block;
+  width: 35px;
+  height: 25px;
+  margin: 0;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0; 
+  z-index: 2; 
+  -webkit-touch-callout: none;
+}
+
+
+.menu-container span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: black;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  
+}
+
+.menu-container span:nth-child(3) {
+  transform-origin: 0% 100%;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+@media only screen and (max-width: 767px) { 
+  .menu-container {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .menu-logo {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .menu-logo img {
+    max-height: 30px;
+  }
+
+  .menu {
+    position: absolute;
+    box-sizing: border-box;
+    width: 300px;
+    right: -300px;
+    top: 0;
+    margin: -20px;
+    padding: 75px 50px 50px;
+    background: #cdcdcd;
+    -webkit-font-smoothing: antialiased;
+   
+    /* transform-origin: 0% 0%;
+    transform: translateX(0%);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0); */
+  }
+
+  .menu-container input:checked ~ .menu {
+    transform: translateX(-100%);
+  }
+}
+
+/* desktop styles */
+@media only screen and (min-width: 768px) { 
+  .menu-container {
+    width: 100%;
+  }
+
+  .menu-container a {
+    color: black;
+  }
+
+  .menu-container input {
+    display: none;
+  }
+
+  /* Burger menu */
+  .menu-container span {
+    display: none;
+  }
+
+  .menu {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu ul {
+    display: flex;
+    padding: 0;
+  }
+
+  .menu li {
+    padding: 0 20px;
+  }
+}
+
+
+table, th, tr, td{
+    text-align: center;
+    border: 1px solid black;
+}
+.table{
+    margin: auto; 
+    padding: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer{
+    background-color: black;
+    color: white;
+
+}
+footer img{
+    display: flex;
+    max-height: 30px;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        
+        
+<nav class="menu-container">
+  <!-- burger menu -->
+  <input type="checkbox" aria-label="Toggle menu" />
+  <span></span>
+  <span></span>
+  <span></span>
+
+  <!-- logo -->
+  <a href="#" class="menu-logo">
+    <img src="https://toppng.com/uploads/preview/ibm-logo-png-transparent-images-116599960209qq4of23yu.png" alt="IBM-logo"/>
+  </a>
+
+  <!-- menu items -->
+  <div class="menu">
+    <ul>
+      <li>
+        <a href="#home">
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="#product">
+          Products
+        </a>
+      </li>
+      <li>
+        <a href="#counsulting">
+          Consulting
+        </a>
+      </li>
+      <li>
+        <a href="#support">
+          Support
+        </a>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <a href="#signup">
+          Sign-up
+        </a>
+      </li>
+      <li>
+        <a href="#login">
+          Login
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<hr>
+        <h2 style="color: #002D9C;">Welcome to IBM</h2>
+        <p style="color: #002D9C;">Your trusted partner in technology solutions.</p>
+    </header>
+    
+    <main>
+        <p>IBM, which stands for International Business Machines Corporation, is a well-known American multinational technology company. It's headquartered in Armonk, New York, and operates in over 170 countries. IBM is publicly traded and is one of the 30 companies included in the Dow Jones Industrial Average.</p>
+        <p>International Business Machines Corporation, nicknamed Big Blue, is an American multinational technology company headquartered in Armonk, New York, and present in over 175 countries. It is a publicly traded company and one of the 30 companies in the Dow Jones Industrial Average.</p>
+        <div class="table">
+            <table>
+            <caption style="color: #002D9C;">Company Information</caption>
+            <thead> 
+                <tr>
+                    <th>Year</th>
+                    <th>Revenue</th>
+                    <th>No. of employee</th>
+                    <th>Investment</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>2020</td>
+                <td>2.5 B$</td>
+                <td>250000</td>
+                <td>2 B$</td>
+            </tr>
+            <tr>
+                <td>2021</td>
+                <td>3 B$</td>
+                <td>250000</td>
+                <td>2.5 B$</td>
+            </tr>
+            <tr>
+                <td>2022</td>
+                <td>4 B$</td>
+                <td>300000</td>
+                <td>1.5 B$</td>
+            </tr>
+        </table>
+        </div>
+ <br>
+
+        <h3 style="color: #002D9C; margin: auto; padding: auto; display: flex; justify-content: center;">IBM Registration Form</h3>
+        <div style="height: 500px; width: 40%; border: 1px solid black; display: flex; justify-content: center; align-items: center; margin: auto; padding: auto;">
+            
+            <form action="#" >
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <br><br>
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+                <br><br>
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+                <br><br>
+                <label for="gender">Gender :</label>
+                <label for="M">Male</label>
+                <input type="radio" id="M" name="gender">
+                <label for="F">Female</label>
+                <input type="radio" id="F" name="gender">
+                <label for="O">Other</label>
+                <input type="radio" id="O" name="gender">
+                <br><br>
+                <label for="country">Country:</label>
+                <select id="country" name="country" required>
+                    <option value="select">Select options</option>
+                    <option value="india">India</option>
+                    <option value="usa">USA</option>
+                    <option value="canada">Canada</option>
+                    <option value="australia">Australia</option>
+                    <option value="other">Other</option>
+                </select>
+                <br><br>
+                <label for="terms">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    I agree to the terms and conditions
+                </label>
+                <br><br>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+        <br>
+        
+    </main>
+    <footer>
+        <hr>
+        <img src="https://toppng.com/uploads/preview/ibm-logo-png-transparent-images-116599960209qq4of23yu.png" alt="IBM-logo"/>
+        <p>&copy; 2023 IBM. All rights reserved.</p>
+        <p>Contact us at <a href="#">IBM</a>
+    </footer>
+    
+</body>
+</html>
